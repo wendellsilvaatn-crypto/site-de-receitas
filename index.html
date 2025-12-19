@@ -1,68 +1,224 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Site de Receitas Básicas</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Receitas Básicas</title>
+  <style>
+:root{
+  --bg:#f3efe9;
+  --card:#faf7f2;
+  --primary:#b8a99a;
+  --text:#4a3f35;
+  --soft:#e6ded4;
+}
+*{box-sizing:border-box}
+body{
+  font-family:'Segoe UI',Arial,sans-serif;
+  background:var(--bg);
+  margin:0;
+  color:var(--text);
+}
+header{
+  background:linear-gradient(135deg,#d8cfc4,#cbbfb2);
+  padding:40px 20px;
+  text-align:center;
+}
+header h1{margin:0;font-size:2.4rem}
+header p{opacity:.9}
+.container{max-width:1200px;margin:auto;padding:30px}
+section{margin-bottom:50px}
+section h2{
+  margin-bottom:20px;
+  font-size:1.6rem;
+  border-left:6px solid var(--primary);
+  padding-left:12px;
+}
+.receitas{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;
+}
+.card{
+  background:var(--card);
+  border-radius:18px;
+  padding:22px;
+  box-shadow:0 10px 25px rgba(0,0,0,.06);
+  transition:.3s;
+}
+.card:hover{transform:translateY(-6px)}
+.card h3{margin-top:0;color:#6b5e52}
+.card ul{padding-left:18px;margin:10px 0}
+.card p{font-size:.95rem;line-height:1.5}
+.badge{
+  display:inline-block;
+  background:var(--soft);
+  padding:4px 10px;
+  border-radius:20px;
+  font-size:.75rem;
+  margin-bottom:10px
+}
+footer{
+  text-align:center;
+  padding:25px;
+  background:#222;
+  color:#aaa
+}
+</style>
 </head>
 <body>
-  <header>
-    <h1>🍽️ Site de Receitas</h1>
-    <p>Receitas simples, práticas e fitness</p>
-  </header>
 
-  <main>
-    <section class="categoria">
-      <h2>Café da Manhã</h2>
-      <div class="lista">
-        <button onclick="abrirReceita('Pão com Ovo')">Pão com Ovo</button>
-        <button onclick="abrirReceita('Mingau de Aveia')">Mingau de Aveia</button>
-        <button onclick="abrirReceita('Vitamina de Banana')">Vitamina de Banana</button>
-      </div>
-    </section>
+<header>
+  <h1>🍳 Receitas Básicas de Cozinha</h1>
+  <p>Receitas simples, rápidas e fáceis</p>
+</header>
 
-    <section class="categoria">
-      <h2>Almoço / Jantar</h2>
-      <div class="lista">
-        <button onclick="abrirReceita('Arroz Branco')">Arroz Branco</button>
-        <button onclick="abrirReceita('Feijão Temperado')">Feijão Temperado</button>
-        <button onclick="abrirReceita('Frango Grelhado')">Frango Grelhado</button>
-      </div>
-    </section>
+<div class="container">
 
-    <section class="categoria">
-      <h2>Doces</h2>
-      <div class="lista">
-        <button onclick="abrirReceita('Brigadeiro')">Brigadeiro</button>
-        <button onclick="abrirReceita('Bolo Simples')">Bolo Simples</button>
-      </div>
-    </section>
+<section>
+<h2>🍳 Café da Manhã</h2>
+<div class="receitas">
+<div class="card"><span class="badge">Rápido</span><h3>Pão com Ovo</h3><p>Clássico simples e nutritivo.</p></div>
+<div class="card"><span class="badge">Doce</span><h3>Mingau de Aveia</h3><p>Aveia, leite e açúcar ou mel.</p></div>
+<div class="card"><span class="badge">Fitness</span><h3>Vitamina de Banana</h3><p>Banana, leite e aveia.</p></div>
+<div class="card"><span class="badge">Tradicional</span><h3>Cuscuz Simples</h3><p>Flocão hidratado no vapor.</p></div>
+<div class="card"><span class="badge">Caseiro</span><h3>Pão na Chapa</h3><p>Pão dourado na manteiga.</p></div>
+<div class="card"><span class="badge">Doce</span><h3>Panqueca Doce</h3><p>Leve e fácil.</p></div>
+</div>
+</section>
 
-    <section class="categoria">
-      <h2>Fitness</h2>
-      <div class="lista">
-        <button onclick="abrirReceita('Omelete Fitness')">Omelete Fitness</button>
-        <button onclick="abrirReceita('Salada com Frango')">Salada com Frango</button>
-      </div>
-    </section>
-  </main>
+<section>
+<h2>🍛 Almoço / Jantar</h2>
+<div class="receitas">
+<div class="card"><span class="badge">Básico</span><h3>Arroz Branco</h3><p>Soltinho e simples.</p></div>
+<div class="card"><span class="badge">Básico</span><h3>Feijão Temperado</h3><p>Alho, sal e água.</p></div>
+<div class="card"><span class="badge">Proteína</span><h3>Frango Grelhado</h3><p>Leve e saudável.</p></div>
+<div class="card"><span class="badge">Proteína</span><h3>Carne Moída</h3><p>Refogada simples.</p></div>
+<div class="card"><span class="badge">Rápido</span><h3>Macarrão Alho e Óleo</h3><p>Clássico italiano.</p></div>
+<div class="card"><span class="badge">Tradicional</span><h3>Arroz com Feijão</h3><p>Base do brasileiro.</p></div>
+<div class="card"><span class="badge">Caseiro</span><h3>Omelete Simples</h3><p>Ovo e temperos.</p></div>
+<div class="card"><span class="badge">Vegetariano</span><h3>Legumes Refogados</h3><p>Coloridos e leves.</p></div>
+<div class="card"><span class="badge">Rápido</span><h3>Salsicha Cozida</h3><p>Prático do dia a dia.</p></div>
+<div class="card"><span class="badge">Tradicional</span><h3>Purê de Batata</h3><p>Cremoso.</p></div>
+</div>
+</section>
 
-  <div id="modal" class="modal">
-    <div class="modal-conteudo">
-      <span class="fechar" onclick="fecharModal()">&times;</span>
-      <h2 id="titulo"></h2>
-      <h3>Ingredientes</h3>
-      <ul id="ingredientes"></ul>
-      <h3>Modo de Preparo</h3>
-      <ol id="preparo"></ol>
-    </div>
+<section>
+<h2>🥗 Lanches</h2>
+<div class="receitas">
+<div class="card"><span class="badge">Leve</span><h3>Sanduíche Natural</h3><p>Pão, frango ou atum.</p></div>
+<div class="card"><span class="badge">Rápido</span><h3>Pão com Queijo</h3><p>Quente ou frio.</p></div>
+<div class="card"><span class="badge">Doce</span><h3>Fruta Picada</h3><p>Da estação.</p></div>
+<div class="card"><span class="badge">Fitness</span><h3>Iogurte com Aveia</h3><p>Leve e nutritivo.</p></div>
+<div class="card"><span class="badge">Clássico</span><h3>Biscoito com Café</h3><p>Simples.</p></div>
+<div class="card"><span class="badge">Caseiro</span><h3>Pão com Manteiga</h3><p>Tradicional.</p></div>
+</div>
+</section>
+
+<section>
+<h2>🍰 Doces</h2>
+<div class="receitas">
+<div class="card"><span class="badge">Clássico</span><h3>Bolo Simples</h3><p>Caseiro.</p></div>
+<div class="card"><span class="badge">Chocolate</span><h3>Brigadeiro</h3><p>Queridinho.</p></div>
+<div class="card"><span class="badge">Coco</span><h3>Beijinho</h3><p>Tradicional.</p></div>
+<div class="card"><span class="badge">Caseiro</span><h3>Arroz Doce</h3><p>Confort food.</p></div>
+<div class="card"><span class="badge">Rápido</span><h3>Banana Caramelizada</h3><p>Doce fácil.</p></div>
+<div class="card"><span class="badge">Doce</span><h3>Panqueca Doce</h3><p>Versátil.</p></div>
+</div>
+</section>
+
+<section>
+<h2>💪 Fitness / Saudável</h2>
+<div class="receitas">
+<div class="card"><span class="badge">Proteína</span><h3>Frango Grelhado</h3><p>Baixa gordura.</p></div>
+<div class="card"><span class="badge">Leve</span><h3>Salada com Frango</h3><p>Completa.</p></div>
+<div class="card"><span class="badge">Carbo</span><h3>Batata Doce</h3><p>Energia limpa.</p></div>
+<div class="card"><span class="badge">Proteína</span><h3>Omelete Fitness</h3><p>Com legumes.</p></div>
+<div class="card"><span class="badge">Fibra</span><h3>Aveia com Banana</h3><p>Saciedade.</p></div>
+<div class="card"><span class="badge">Leve</span><h3>Arroz Integral</h3><p>Mais fibras.</p></div>
+<div class="card"><span class="badge">Proteína</span><h3>Clara de Ovo</h3><p>Alta proteína.</p></div>
+<div class="card"><span class="badge">Leve</span><h3>Salada de Frutas</h3><p>Vitaminas.</p></div>
+</div>
+</section>
+
+</div>
+<footer>
+  <p>© 2025 - Site de Receitas Básicas</p>
+</footer>
+
+<script>
+const receitas = {
+  /* CAFÉ DA MANHÃ */
+  "Pão com Ovo":{ingredientes:["1 pão francês","1 ovo","Sal a gosto","Manteiga ou óleo"],preparo:["Aqueça uma frigideira em fogo médio com a manteiga.","Quebre o ovo e coloque com cuidado na frigideira.","Tempere com sal.","Frite até a clara firmar.","Abra o pão, coloque o ovo e sirva."]},
+  "Mingau de Aveia":{ingredientes:["1 xícara de leite","2 colheres de aveia","Açúcar ou mel","Canela opcional"],preparo:["Misture o leite e a aveia na panela com o fogo desligado.","Leve ao fogo médio mexendo sempre.","Quando engrossar, adicione o açúcar.","Cozinhe por mais 2 minutos.","Finalize com canela."]},
+  "Vitamina de Banana":{ingredientes:["1 banana madura","1 copo de leite","1 colher de aveia"],preparo:["Descasque e corte a banana.","Coloque todos os ingredientes no liquidificador.","Bata até ficar homogêneo.","Sirva imediatamente."]},
+  "Cuscuz Simples":{ingredientes:["1 xícara de flocão","1/2 xícara de água","Sal"],preparo:["Hidrate o flocão com água e sal.","Deixe descansar por 10 minutos.","Cozinhe no vapor por 10 minutos.","Sirva quente."]},
+  "Pão na Chapa":{ingredientes:["Pão","Manteiga"],preparo:["Passe manteiga no pão.","Aqueça a frigideira.","Doure o pão dos dois lados."]},
+  "Panqueca Doce":{ingredientes:["1 ovo","1 xícara de leite","1 xícara de farinha","Açúcar"],preparo:["Misture todos os ingredientes.","Aqueça uma frigideira antiaderente.","Coloque uma concha da massa.","Doure dos dois lados."]},
+
+  /* ALMOÇO / JANTAR */
+  "Arroz Branco":{ingredientes:["1 xícara de arroz","2 xícaras de água","Alho","Óleo","Sal"],preparo:["Refogue o alho no óleo.","Adicione o arroz e mexa.","Coloque a água e o sal.","Cozinhe até a água secar.","Tampe e descanse 5 minutos."]},
+  "Feijão Temperado":{ingredientes:["Feijão cozido","Alho","Óleo","Sal"],preparo:["Refogue o alho no óleo.","Adicione o feijão com caldo.","Ajuste o sal.","Ferva por 10 minutos."]},
+  "Frango Grelhado":{ingredientes:["Filé de frango","Sal","Alho","Óleo"],preparo:["Tempere o frango.","Aqueça a frigideira.","Grelhe 5 minutos de cada lado.","Retire quando dourar."]},
+  "Carne Moída":{ingredientes:["Carne moída","Alho","Óleo","Sal"],preparo:["Refogue o alho no óleo.","Adicione a carne.","Mexa até soltar água.","Cozinhe até dourar."]},
+  "Macarrão Alho e Óleo":{ingredientes:["Macarrão","Alho","Óleo","Sal"],preparo:["Cozinhe o macarrão em água e sal.","Doure o alho no óleo.","Misture o macarrão escorrido."]},
+  "Arroz com Feijão":{ingredientes:["Arroz","Feijão"],preparo:["Aqueça ambos separadamente.","Sirva juntos no prato."]},
+  "Omelete Simples":{ingredientes:["2 ovos","Sal","Óleo"],preparo:["Bata os ovos com sal.","Aqueça a frigideira.","Despeje os ovos.","Dobre e sirva."]},
+  "Legumes Refogados":{ingredientes:["Legumes","Alho","Óleo","Sal"],preparo:["Corte os legumes.","Refogue o alho.","Adicione os legumes.","Cozinhe até ficarem macios."]},
+  "Salsicha Cozida":{ingredientes:["Salsicha","Água"],preparo:["Ferva a água.","Adicione a salsicha.","Cozinhe por 5 minutos."]},
+  "Purê de Batata":{ingredientes:["Batata","Leite","Manteiga","Sal"],preparo:["Cozinhe as batatas.","Amasse ainda quentes.","Misture leite e manteiga.","Ajuste o sal."]},
+
+  /* LANCHES */
+  "Sanduíche Natural":{ingredientes:["Pão","Frango desfiado ou atum","Alface"],preparo:["Corte o pão.","Adicione o recheio.","Monte e sirva."]},
+  "Pão com Queijo":{ingredientes:["Pão","Queijo"],preparo:["Monte o sanduíche.","Leve à frigideira ou forno."]},
+  "Fruta Picada":{ingredientes:["Frutas"],preparo:["Lave bem as frutas.","Pique em pedaços.","Sirva."]},
+  "Iogurte com Aveia":{ingredientes:["Iogurte","Aveia"],preparo:["Coloque o iogurte em uma tigela.","Adicione a aveia.","Misture e sirva."]},
+  "Biscoito com Café":{ingredientes:["Biscoito","Café"],preparo:["Prepare o café.","Sirva com biscoito."]},
+  "Pão com Manteiga":{ingredientes:["Pão","Manteiga"],preparo:["Passe manteiga no pão.","Sirva ou aqueça."]},
+
+  /* DOCES */
+  "Bolo Simples":{ingredientes:["Ovos","Açúcar","Farinha","Leite","Fermento"],preparo:["Bata ovos e açúcar.","Adicione leite e farinha.","Misture o fermento.","Asse a 180°C por 40 minutos."]},
+  "Brigadeiro":{ingredientes:["Leite condensado","Chocolate em pó","Manteiga"],preparo:["Misture tudo na panela.","Cozinhe mexendo.","Desgrude do fundo e desligue."]},
+  "Beijinho":{ingredientes:["Leite condensado","Coco ralado","Manteiga"],preparo:["Misture tudo.","Cozinhe mexendo.","Desligue ao desgrudar."]},
+  "Arroz Doce":{ingredientes:["Arroz","Leite","Açúcar"],preparo:["Cozinhe o arroz.","Adicione leite e açúcar.","Cozinhe até cremoso."]},
+  "Banana Caramelizada":{ingredientes:["Banana","Açúcar"],preparo:["Derreta o açúcar.","Adicione as bananas.","Caramelize levemente."]},
+
+  /* FITNESS */
+  "Salada com Frango":{ingredientes:["Frango grelhado","Alface","Tomate"],preparo:["Grelhe o frango.","Corte os legumes.","Misture tudo."]},
+  "Batata Doce":{ingredientes:["Batata doce","Água"],preparo:["Descasque a batata.","Cozinhe até macia.","Escorra e sirva."]},
+  "Omelete Fitness":{ingredientes:["Ovos","Legumes","Sal"],preparo:["Bata os ovos.","Adicione legumes.","Cozinhe em fogo baixo."]},
+  "Aveia com Banana":{ingredientes:["Aveia","Banana"],preparo:["Corte a banana.","Misture com a aveia.","Sirva."]},
+  "Arroz Integral":{ingredientes:["Arroz integral","Água","Sal"],preparo:["Cozinhe em água e sal por 30 minutos.","Escorra se necessário."]},
+  "Clara de Ovo":{ingredientes:["Claras","Sal"],preparo:["Bata levemente as claras.","Cozinhe em frigideira antiaderente."]},
+  "Salada de Frutas":{ingredientes:["Frutas variadas"],preparo:["Lave as frutas.","Corte em cubos.","Misture e sirva."]}
+};
+
+const cards = document.querySelectorAll('.card h3');
+cards.forEach(h3=>{
+  h3.parentElement.addEventListener('click',()=>abrirReceita(h3.innerText));
+});
+
+function abrirReceita(nome){
+  const r = receitas[nome];
+  if(!r) return alert('Receita em construção');
+  document.getElementById('titulo').innerText = nome;
+  document.getElementById('ing').innerHTML = r.ingredientes.map(i=>`<li>${i}</li>`).join('');
+  document.getElementById('prep').innerHTML = r.preparo.map(p=>`<li>${p}</li>`).join('');
+  document.getElementById('modal').style.display='flex';
+}
+function fechar(){document.getElementById('modal').style.display='none';}
+</script>
+
+<div id="modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);align-items:center;justify-content:center;">
+  <div style="background:#faf7f2;padding:30px;border-radius:20px;max-width:500px;width:90%">
+    <h2 id="titulo"></h2>
+    <h4>Ingredientes</h4>
+    <ul id="ing"></ul>
+    <h4>Modo de preparo</h4>
+    <ol id="prep"></ol>
+    <button onclick="fechar()" style="margin-top:15px;padding:10px 20px;border:none;border-radius:10px;background:#b8a99a;color:#fff">Fechar</button>
   </div>
-
-  <footer>
-    <p>criado por Wendell Antonio Silva</p>
-  </footer>
-
-  <script src="script.js"></script>
+</div>
+<footer style="text-align:center;font-size:11px;color:#b8a99a;margin-top:60px;padding:20px 0;">criado por Wendell Antonio Silva</footer>
 </body>
 </html>
