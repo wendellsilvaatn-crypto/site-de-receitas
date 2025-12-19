@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site de Receitas Básicas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🍽️ Site de Receitas</h1>
+    <p>Receitas simples, práticas e fitness</p>
+  </header>
+
+  <main>
+    <section class="categoria">
+      <h2>Café da Manhã</h2>
+      <div class="lista">
+        <button onclick="abrirReceita('Pão com Ovo')">Pão com Ovo</button>
+        <button onclick="abrirReceita('Mingau de Aveia')">Mingau de Aveia</button>
+        <button onclick="abrirReceita('Vitamina de Banana')">Vitamina de Banana</button>
+      </div>
+    </section>
+
+    <section class="categoria">
+      <h2>Almoço / Jantar</h2>
+      <div class="lista">
+        <button onclick="abrirReceita('Arroz Branco')">Arroz Branco</button>
+        <button onclick="abrirReceita('Feijão Temperado')">Feijão Temperado</button>
+        <button onclick="abrirReceita('Frango Grelhado')">Frango Grelhado</button>
+      </div>
+    </section>
+
+    <section class="categoria">
+      <h2>Doces</h2>
+      <div class="lista">
+        <button onclick="abrirReceita('Brigadeiro')">Brigadeiro</button>
+        <button onclick="abrirReceita('Bolo Simples')">Bolo Simples</button>
+      </div>
+    </section>
+
+    <section class="categoria">
+      <h2>Fitness</h2>
+      <div class="lista">
+        <button onclick="abrirReceita('Omelete Fitness')">Omelete Fitness</button>
+        <button onclick="abrirReceita('Salada com Frango')">Salada com Frango</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal">
+    <div class="modal-conteudo">
+      <span class="fechar" onclick="fecharModal()">&times;</span>
+      <h2 id="titulo"></h2>
+      <h3>Ingredientes</h3>
+      <ul id="ingredientes"></ul>
+      <h3>Modo de Preparo</h3>
+      <ol id="preparo"></ol>
+    </div>
+  </div>
+
+  <footer>
+    <p>criado por Wendell Antonio Silva</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
